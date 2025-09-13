@@ -1,0 +1,640 @@
+
+        /* Custom CSS Variables for Light and Dark Themes */
+        :root {
+            /* Sophisticated Color Palette */
+            --deep-teal: #0a3d4d;
+            --teal-light: #1d6a82;
+            --burgundy: #7a2f47;
+            --burgundy-light: #9e435f;
+            --gold: #c8a971;
+            --gold-light: #d9c49c;
+            --success: #2a9d8f;
+            --danger: #e76f51;
+            --info: #3d85c6;
+            
+            /* Neutral Colors - Light Theme */
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --text-primary: #2b2d42;
+            --text-secondary: #6c757d;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --header-bg: linear-gradient(135deg, var(--deep-teal) 0%, var(--burgundy) 100%);
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] {
+            /* Elegant Dark Theme */
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-card: #252525;
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --header-bg: linear-gradient(135deg, var(--teal-light) 0%, var(--burgundy-light) 100%);
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header-custom {
+            background: var(--header-bg) !important;
+            box-shadow: var(--shadow);
+            padding: 1.5rem 0;
+            border-bottom: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-custom h1 {
+            color: white;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .header-custom span {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* Enhanced Date Display */
+        .date-display-container {
+            background: var(--header-bg) !important;
+            color: white !important;
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--gold);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .date-display-container .badge {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Enhanced City Selector */
+        .city-selector {
+            background: rgba(255, 255, 255, 0.12) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+            border-radius: 25px !important;
+            padding: 0.5rem 1.2rem !important;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 1rem center !important;
+            background-size: 16px !important;
+            font-weight: 500;
+        }
+
+        .city-selector:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            border-color: rgba(255, 255, 255, 0.35) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .city-selector:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Enhanced Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.12) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+            border-radius: 25px !important;
+            padding: 0.5rem 1rem !important;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            border-color: rgba(255, 255, 255, 0.35) !important;
+            transform: translateY(-2px);
+        }
+
+        .language-btn.active {
+            background: rgba(255, 255, 255, 0.25) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Theme toggle enhancements */
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.12) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+            border-radius: 50% !important;
+            width: 45px !important;
+            height: 45px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.3s ease !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            border-color: rgba(255, 255, 255, 0.35) !important;
+            transform: scale(1.1) rotate(180deg);
+        }
+
+        /* Enhanced Card Styles */
+        .card-custom {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .card-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--deep-teal), var(--burgundy), var(--gold));
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-custom::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-custom:hover::after {
+            opacity: 1;
+            animation: shine 1.5s ease-in-out;
+        }
+
+        @keyframes shine {
+            0% {
+                right: -100%;
+            }
+            100% {
+                right: 100%;
+            }
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.75rem;
+            color: var(--text-primary);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--deep-teal);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+        }
+
+        .card-title i {
+            color: var(--deep-teal);
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, var(--deep-teal), var(--burgundy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Enhanced Weather Display */
+        .weather-display {
+            text-align: center;
+            padding: 1.5rem 0;
+            position: relative;
+        }
+
+        .temperature {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--deep-teal);
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, var(--deep-teal), var(--burgundy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .weather-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--deep-teal), var(--burgundy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Enhanced Alert Items */
+        .alert-item, .traffic-item {
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 16px;
+            border-left: 5px solid var(--deep-teal);
+            background: linear-gradient(135deg, rgba(10, 61, 77, 0.1) 0%, rgba(122, 47, 71, 0.1) 100%);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Enhanced Event Items */
+        .event-item {
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(122, 47, 71, 0.1) 0%, rgba(200, 169, 113, 0.1) 100%);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--burgundy), var(--deep-teal));
+        }
+
+        /* Enhanced Analytics */
+        .analytics-container {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2.5rem;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .chart-container {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Stats Cards */
+        .stat-card {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--deep-teal), var(--burgundy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* Weather Details */
+        .weather-details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .weather-detail {
+            text-align: center;
+            flex: 1;
+        }
+
+        .detail-value {
+            font-weight: 700;
+            color: var(--deep-teal);
+            font-size: 1.1rem;
+        }
+
+        .detail-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Alert Indicator */
+        .alert-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--danger) 100%);
+            margin-right: 1rem;
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+
+        /* Event Icon */
+        .event-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-teal) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-right: 1.25rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Utility Classes */
+        .text-primary-custom {
+            color: var(--deep-teal) !important;
+        }
+
+        .bg-primary-custom {
+            background-color: var(--deep-teal) !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .date-display-container {
+                padding: 0.8rem 0;
+            }
+            
+            .date-display-container .container > div {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+            
+            .city-selector {
+                padding: 0.4rem 1rem !important;
+                font-size: 0.9rem;
+            }
+            
+            .language-btn {
+                padding: 0.4rem 0.8rem !important;
+                font-size: 0.85rem;
+            }
+            
+            .card-custom {
+                padding: 1.5rem;
+                margin-bottom: 1.25rem;
+                border-radius: 16px;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .temperature {
+                font-size: 3rem;
+            }
+            
+            .weather-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-custom h1 {
+                font-size: 1.6rem;
+            }
+            
+            .header-custom span {
+                font-size: 0.95rem;
+            }
+            
+            .event-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                margin-right: 1rem;
+            }
+            
+            .analytics-container {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Loading States */
+        .loading-spinner {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--deep-teal);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error States */
+        .error-message {
+            background: linear-gradient(135deg, rgba(231, 111, 81, 0.1) 0%, rgba(231, 111, 81, 0.1) 100%);
+            border: 1px solid var(--danger);
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: var(--danger);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Badge Styles */
+        .badge {
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Grid Layout Improvements */
+        .row.g-4 {
+            margin: 0 -0.75rem;
+        }
+
+        .row.g-4 > [class*="col-"] {
+            padding: 0 0.75rem;
+        }
+
+        /* Form Elements */
+        select, .btn {
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        select {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        /* Animation Keyframes */
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Scrollbar Styling for Webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--deep-teal);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--teal-light);
+        }
+
+        /* Selection Color */
+        ::selection {
+            background-color: var(--deep-teal);
+            color: white;
+        }
+
+        /* Focus Styles for Accessibility */
+        button:focus,
+        select:focus {
+            outline: 2px solid var(--deep-teal);
+            outline-offset: 2px;
+        }
+
+        /* Print Styles */
+        @media print {
+            .theme-toggle,
+            .language-switcher {
+                display: none !important;
+            }
+            
+            .card-custom {
+                border: 1px solid #000 !important;
+                box-shadow: none !important;
+            }
+        }
+
+        /* Demo Content Styles */
+        .demo-content {
+            padding: 2rem 0;
+        }
+        
+        .demo-card {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .demo-button {
+            margin-top: 1rem;
+            background: rgba(10, 61, 77, 0.1);
+            border: 1px solid var(--deep-teal);
+            color: var(--deep-teal);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .demo-button:hover {
+            background: var(--deep-teal);
+            color: white;
+            transform: translateY(-2px);
+        }
