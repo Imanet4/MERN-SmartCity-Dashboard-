@@ -88,6 +88,7 @@ A comprehensive full-stack web application for managing smart city operations in
 
 \`\`\`
 smart-city-dashboard/
+
 ├── client/                 # React frontend
 
 │   ├── public/
