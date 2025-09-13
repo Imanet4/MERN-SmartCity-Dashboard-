@@ -202,7 +202,9 @@ For support and questions, please open an issue in the GitHub repository or cont
 **Built with ❤️ for Agadir, Morocco** 🇲🇦
 
 
---- Screenshots of the website UI ---
+                                                --- Screenshots of the website UI ---
+
+
 <img width="1920" height="2662" alt="Dashboard-light" src="https://github.com/user-attachments/assets/5c8c696a-8d80-4bc5-ad67-2fb4ede251df" />
 
 
