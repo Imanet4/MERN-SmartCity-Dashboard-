@@ -200,3 +200,49 @@ For support and questions, please open an issue in the GitHub repository or cont
 ---
 
 **Built with ❤️ for Agadir, Morocco** 🇲🇦
+
+
+--- Screenshots of the website UI ---
+<img width="1920" height="2662" alt="Dashboard-light" src="https://github.com/user-attachments/assets/5c8c696a-8d80-4bc5-ad67-2fb4ede251df" />
+
+
+
+<img width="1920" height="2662" alt="Dashboard-dark" src="https://github.com/user-attachments/assets/e387489f-9720-4a15-b9a3-60689cca2894" />
+
+
+<img width="1920" height="2967" alt="Weather-light" src="https://github.com/user-attachments/assets/4b70d2f4-1ecd-42bb-b57a-0ada402e36f8" />
+
+
+<img width="1920" height="2967" alt="Weather-dark" src="https://github.com/user-attachments/assets/18b914c9-cd0a-4371-b8e2-b7e36d0bbc1a" />
+
+
+<img width="1920" height="1996" alt="Events-light" src="https://github.com/user-attachments/assets/b9ab4697-7358-44ed-b1e4-a8997816d5e6" />
+
+
+<img width="1920" height="1996" alt="Events-dark" src="https://github.com/user-attachments/assets/7f42c589-a641-4183-96a5-f01630f1c545" />
+
+
+<img width="1920" height="2106" alt="Map-light" src="https://github.com/user-attachments/assets/1fe67920-bba4-4f32-9060-fe07dd6fd410" />
+
+
+<img width="1920" height="2106" alt="Map-dark" src="https://github.com/user-attachments/assets/75aaa601-3e72-4f6f-b21a-e7fabec6688f" />
+
+
+
+<img width="1920" height="1427" alt="Login-light" src="https://github.com/user-attachments/assets/1a6ad993-0d03-4eec-bbaa-7859c4325086" />
+
+
+<img width="1920" height="1427" alt="Login-dark" src="https://github.com/user-attachments/assets/e32b6c4d-075e-44f3-869c-bb9f6e67785c" />
+
+
+<img width="1920" height="1557" alt="register-light" src="https://github.com/user-attachments/assets/dd016b7f-25ce-4c55-9832-04829c6dfd73" />
+
+
+<img width="1920" height="2152" alt="Profile1" src="https://github.com/user-attachments/assets/ee932ce9-9860-44b1-8b8d-9e44c57045df" />
+<img width="1920" height="1880" alt="Profile2" src="https://github.com/user-attachments/assets/68c17436-1fed-418c-989d-30851f94fd85" />
+<img width="1920" height="2000" alt="Profile3" src="https://github.com/user-attachments/assets/2e956bcb-6109-46ea-ba5c-ed4bb4ba9cb1" />
+
+
+<img width="1916" height="876" alt="CREATE" src="https://github.com/user-attachments/assets/364dd2a8-3860-4f86-8315-959befd4b033" />
+
+
